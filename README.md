@@ -21,13 +21,21 @@ El proyecto sigue una estructura de directorios modular para facilitar el manten
 - `index.html`: Punto de entrada principal de la aplicación.
 
 ## 4. Equipo de Desarrollo
-*   **Canosa, Tomás Salvador** - *Frontend Developer*
-*   **Herrero, Facundo** - *Frontend Developer*
-*   **Roggero, Milagros De Los Angeles** - *Frontend Developer*
-*   **Serrano, Elias Ezequiel** - *Frontend Developer*
+*   **Canosa, Tomás Salvador** - *Frontend Developer* responsable del Index
+*   **Herrero, Facundo** - *Frontend Developer* responsable del Login
+*   **Roggero, Milagros De Los Angeles** - *Frontend Developer* responsable del Perfil
+*   **Serrano, Elias Ezequiel** - *Frontend Developer* responsable del Registro
 
 ## 5. Protocolo de Contribución
 Para mantener la integridad de la rama principal (`main`), se requiere:
 1. Sincronizar repositorio local: `git pull origin main`.
 2. Trabajar exclusivamente en la rama de funcionalidad asignada: `feature/[nombre-interfaz]`.
 3. Documentar los cambios mediante mensajes de commit descriptivos.
+
+## 6. Asignación de Ramas de Trabajo
+Para evitar conflictos, cada integrante trabajará en su propia rama de funcionalidad (feature branch):
+
+* **Tomás Salvador Canosa:** `feature/index-home`
+* **Facundo Herrero:** `feature/login-auth`
+* **Milagros De Los Angeles Roggero:** `feature/perfil-usuario`
+* **Elias Ezequiel Serrano:** `feature/registro-form`
