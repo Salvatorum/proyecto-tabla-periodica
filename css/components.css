@@ -1,0 +1,79 @@
+
+/*--  Header y navbar  --*/
+
+.hero {
+    background-color: var(--hero-background-color); /*var(--bg-main);*/
+    background-image: 
+        linear-gradient(var(--hero-linear-color) 1px, transparent 1px),
+        linear-gradient(90deg, var(--hero-linear-color) 1px, transparent 1px);
+        background-size: 40px 40px;
+
+}
+
+header nav ul {
+    display: flex;
+    justify-content:flex-start;
+    padding: 1em;
+    width: 100%;
+} 
+
+header nav ul li {
+   list-style: none;
+}
+header nav ul li #elementos:hover {
+    box-shadow: 0 2px 0 0 var(--nav-line-a);
+    transition: box-shadow 0.3s ease;
+}
+header nav ul li:nth-child(2) {
+    margin-left: auto;
+}
+header nav ul li:nth-child(3) {
+    margin-left: 2em;
+}
+.nav-shadow-icon:hover{
+    box-shadow: 0 2px 0 0 var(--nav-line-a);
+    transition: box-shadow 0.3s ease;
+}
+
+header nav ul li a {
+   text-decoration: none;
+   color: var(--text-main);
+   font-size:large;
+   letter-spacing: 2px;
+}  
+header nav ul li a img {
+    width: auto;
+    height: 30px;
+}
+
+
+/*-- Main --*/
+
+main {
+    min-height: 100vh;
+}
+
+/*-- Tarjetas --*/
+
+.card {
+    box-shadow: 0px 0px 5px 1px var(--color-secondary);
+    padding: 1em;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    min-width: 0;
+    transition: box-shadow 0.3s ease; /* Un toque extra para que el hover sea suave */
+}
+
+.card:hover {
+    box-shadow: 0px 0px 10px 1px var(--color-primary);
+}
+
+.card h3 {
+    white-space: nowrap;     
+    overflow: hidden;        
+    text-overflow: ellipsis; 
+    margin-bottom: 1em;
+    font-family: var(--font-titulos);
+}
