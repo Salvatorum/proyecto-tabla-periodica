@@ -92,10 +92,47 @@ button {
     font-weight: bold;
 }
 
+
 button:hover {
 
     background-color: #5A00B3;
 }
+
+/* Hago un check box oculto para crear un mensaje de perfil guardado*/
+.checkoculto {
+    display: none;
+}
+
+.actualizar_perfil-disparador {
+    display: inline-block;
+    background-color: #291880;
+    color: white;
+    padding: 0.9em 1.5em;
+    border-radius: 500px;
+    border: white;
+    width: 60%;
+    cursor: pointer;
+    transition: 0.3s;
+    font-weight: bold;
+    text-align: center;
+
+}
+
+#mensaje {
+    margin-top: 15px;
+    color: green;
+    display: none;
+}
+
+/* Aca muestro el mensaje*/
+.checkoculto:checked~#mensaje {
+    display: block;
+}
+
+.checkoculto:checked~.actualizar_perfil-disparador {
+    background-color: #5A00B3;
+}
+
 
 @media (max-width: 768px) {
     main {
