@@ -1,0 +1,132 @@
+* {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    background-color: #0e1117;
+    background-image:
+        linear-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+    background-size: 40px 40px;
+    overflow: hidden;
+}
+
+
+main {
+
+    margin: 3em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+h1 {
+    color: black;
+}
+
+.contenedor_principal {
+
+    height: 85vh;
+    width: 90%;
+    display: grid;
+    grid-template-columns: repeat(2, 50%);
+    margin: 2em;
+}
+
+.perfil {
+    max-width: 50%;
+}
+
+.perfil,
+.favoritos {
+    background-color: whitesmoke;
+    display: flex;
+    flex-direction: column;
+    padding: 3em;
+    gap: 1em;
+    border-radius: 15px;
+    align-items: center;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+}
+
+.perfil:hover,
+.favoritos:hover {
+    transform: translateY(-5px);
+}
+
+.perfil img {
+
+    width: 40%;
+
+}
+
+.perfil input {
+    text-align: center;
+    background-color: #d9d9d9;
+    width: 100%;
+    border-radius: 500px;
+    height: 3em;
+    border: none;
+    outline: none;
+}
+
+input::placeholder {
+    color: #666;
+}
+
+
+
+button {
+    background-color: #291880;
+    color: white;
+    padding: 0.9em 1.5em;
+    border-radius: 500px;
+    border: white;
+    width: 60%;
+    cursor: pointer;
+    transition: 0.3s;
+    font-weight: bold;
+}
+
+button:hover {
+
+    background-color: #5A00B3;
+}
+
+@media (max-width: 768px) {
+    main {
+
+        margin: 0em;
+    }
+
+    body {
+        overflow: visible;
+    }
+
+    .contenedor_principal {
+        grid-template-columns: 1fr;
+        height: 100vh;
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+        gap: 1em;
+    }
+
+    h1 {
+        color: black;
+        font-size: 2em;
+    }
+
+    .perfil {
+        max-width: 100%;
+    }
+
+    .perfil,
+    .favoritos {
+        padding: 1em;
+    }
+}
