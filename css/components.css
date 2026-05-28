@@ -1,14 +1,13 @@
-
 /*--  Header y navbar  --*/
 
 .hero {
-    background-color: var(--hero-background-color); /*var(--bg-main);*/
+    background-color: var(--hero-background-color);
     background-image: 
         linear-gradient(var(--hero-linear-color) 1px, transparent 1px),
         linear-gradient(90deg, var(--hero-linear-color) 1px, transparent 1px);
         background-size: 40px 40px;
-
 }
+
 header nav {
     display: flex;
     align-items: center; 
@@ -29,10 +28,10 @@ header nav ul li {
    list-style: none;
 }
 
-
 header nav ul li:nth-child(3) {
     margin-left: auto;
 }
+
 #logo {
     width: auto;
     height: 100px;
@@ -43,32 +42,19 @@ header nav ul li a img {
     width: auto;
     height: 30px;
 }
+
 header nav ul li #elementos:hover,
 .nav-shadow-icon:hover {
     box-shadow: 0 2px 0 0 var(--nav-line-a);
     transition: box-shadow 0.3s ease;
 }
+
 header nav ul li a {
    text-decoration: none;
    color: var(--text-main);
    font-size: large;
    letter-spacing: 2px;
 }
-
-
-
-header nav ul li #elementos:hover {
-    box-shadow: 0 2px 0 0 var(--nav-line-a);
-    transition: box-shadow 0.3s ease;
-}
-
-.nav-shadow-icon:hover{
-    box-shadow: 0 2px 0 0 var(--nav-line-a);
-    transition: box-shadow 0.3s ease;
-}
-
-
-
 
 /*-- Main --*/
 
@@ -113,6 +99,10 @@ main {
     font-size: 2.2rem;
     font-family: var(--font-titulos);
     color: var(--color-primary); 
+    white-space: nowrap;     
+    overflow: hidden;        
+    text-overflow: ellipsis; 
+    margin-bottom: 0.2em;
 }
 
 .card .name {
@@ -125,19 +115,6 @@ main {
     font-size: 0.7rem;
     color: var(--atomic-mass-color);
     margin-top: auto;
-}
-
-.card:hover {
-    box-shadow: 0px 0px 10px 1px var(--color-primary);
-}
-
-.card h3 {
-    white-space: nowrap;     
-    overflow: hidden;        
-    text-overflow: ellipsis; 
-    margin-bottom: 0.2em;
-    font-family: var(--font-titulos);
-    color: var(--color-primary); 
 }
 
 .card-link {
@@ -176,7 +153,6 @@ main {
     border: 2px solid var(--color-primary); 
 }
 
-
 .close-btn {
     position: absolute;
     top: 10px;
@@ -202,8 +178,6 @@ main {
     margin-bottom: 10px;
     line-height: 1.5;
 }
-
-
 
 /* -- Footer -- */
 footer{
