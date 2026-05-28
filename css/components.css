@@ -9,42 +9,65 @@
         background-size: 40px 40px;
 
 }
+header nav {
+    display: flex;
+    align-items: center; 
+    padding: 1em;
+    gap: 2em; 
+}
 
 header nav ul {
     display: flex;
-    justify-content:flex-start;
-    padding: 1em;
-    width: 100%;
-} 
+    align-items: center;
+    gap: 2em; 
+    margin: 0;
+    padding: 0;
+    flex-grow: 1; 
+}
 
 header nav ul li {
    list-style: none;
 }
+
+
+header nav ul li:nth-child(3) {
+    margin-left: auto;
+}
+#logo {
+    width: auto;
+    height: 100px;
+    border-radius: 2em;
+}
+
+header nav ul li a img {
+    width: auto;
+    height: 30px;
+}
+header nav ul li #elementos:hover,
+.nav-shadow-icon:hover {
+    box-shadow: 0 2px 0 0 var(--nav-line-a);
+    transition: box-shadow 0.3s ease;
+}
+header nav ul li a {
+   text-decoration: none;
+   color: var(--text-main);
+   font-size: large;
+   letter-spacing: 2px;
+}
+
+
+
 header nav ul li #elementos:hover {
     box-shadow: 0 2px 0 0 var(--nav-line-a);
     transition: box-shadow 0.3s ease;
 }
-header nav ul li:nth-child(2) {
-    margin-left: auto;
-}
-header nav ul li:nth-child(3) {
-    margin-left: 2em;
-}
+
 .nav-shadow-icon:hover{
     box-shadow: 0 2px 0 0 var(--nav-line-a);
     transition: box-shadow 0.3s ease;
 }
 
-header nav ul li a {
-   text-decoration: none;
-   color: var(--text-main);
-   font-size:large;
-   letter-spacing: 2px;
-}  
-header nav ul li a img {
-    width: auto;
-    height: 30px;
-}
+
 
 
 /*-- Main --*/
@@ -76,4 +99,36 @@ main {
     text-overflow: ellipsis; 
     margin-bottom: 1em;
     font-family: var(--font-titulos);
+}
+
+/* -- Footer -- */
+footer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    padding: 20px 40px;
+    margin-top: 2em;
+}
+
+#redes a {
+    display: inline-flex; 
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    background-color: rgb(208, 208, 208);
+    margin-right: 1em;
+    margin-bottom: 1em;
+    padding: 5px;
+}
+
+#redes img {
+    width: 32px;
+    height: auto;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+#redes a:hover img {
+    transform: scale(1.15); 
 }
