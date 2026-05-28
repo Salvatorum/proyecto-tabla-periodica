@@ -6,30 +6,14 @@
     text-transform: uppercase; 
 }
 
-
 #sect-card {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-    grid-auto-rows: 1fr; 
     gap: 20px;
     padding: 20px;
     margin-top: 10em;
-    align-items: center;
-    max-width: 600px;
+    max-width: 1200px; 
     width: 100%;
     margin-left: auto;
     margin-right: auto;
 }
-
-.card:nth-child(1){
-    grid-column: 1;
-    grid-row: 1;
-}
-/*
-@media (max-width: 600px) {
-    #sect-targets { grid-template-columns: repeat(3, 1fr); }
-}
-
-@media (max-width: 450px) {
-    #sect-targets { grid-template-columns: repeat(2, 1fr); }
-}*/

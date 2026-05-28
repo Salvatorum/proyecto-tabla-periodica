@@ -33,8 +33,14 @@
     --nav-line-a: #F0F4F8;
     
     /* Agregados para asegurar lectura (Contraste) */
-    --text-main: #F0F4F8;        /* Blanco azulado para textos */
+    --text-main: #F0F4F8;   
+    --text-color-card: #14161f;     /* Blanco azulado para textos */
+    --atomic-mass-color:gray;
     --bg-glass: rgba(84, 102, 167, 0.15); /* Transparencia usando su color secundario */
+    --background-color-redes: rgb(208, 208, 208);
+    --background-color-card: #ffffff;
+    --background-color-modal-caja: #F0F4F8;
+    --background-color-modal:rgba(7, 6, 21, 0.85);
 
     /* Tipografías */
     --font-titulos: 'Cranio', sans-serif;
