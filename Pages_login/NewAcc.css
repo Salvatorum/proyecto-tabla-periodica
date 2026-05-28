@@ -47,8 +47,6 @@ main{
     text-align: center;
 }
 
-
-
 h1{
 
     font-size: 40px;
@@ -88,6 +86,8 @@ input{
 
     display: block;
 
+    width: 100%;
+
     text-align: center;
 
     padding: 15px;
@@ -100,7 +100,7 @@ input{
 
     text-decoration: none;
 
-    margin-top: 10px;
+    transition: 0.3s;
 }
 
 .boton-login:hover{
@@ -111,11 +111,6 @@ input{
 .links{
 
     margin-top: 25px;
-
-    display: flex;
-    flex-direction: column;
-
-    gap: 10px;
 }
 
 .links a{
@@ -129,8 +124,6 @@ input{
 
     text-decoration: underline;
 }
-
-/* RESPONSIVE */
 
 /* TABLET */
 
@@ -165,11 +158,6 @@ input{
     }
 
     input{
-
-        padding: 12px;
-    }
-
-    button{
 
         padding: 12px;
     }
