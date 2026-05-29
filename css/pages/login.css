@@ -153,4 +153,55 @@ input{
         padding: 12px;
     }
 
+    footer {
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 1.5em 2em;
+
+    border-top: 1px solid rgba(255,255,255,0.1);
+
+    margin-top: 3em;
+}
+
+#text-footer p {
+
+    color: var(--text-main);
+    font-size: 0.9rem;
+}
+
+#redes {
+
+    display: flex;
+    gap: 1em;
+}
+
+#redes a img {
+
+    width: 28px;
+    height: 28px;
+
+    transition: transform 0.3s ease;
+}
+
+#redes a img:hover {
+
+    transform: scale(1.1);
+}
+
+/* ---------- RESPONSIVE ---------- */
+
+@media (max-width: 768px) {
+
+    footer {
+
+        flex-direction: column;
+        gap: 1em;
+
+        text-align: center;
+    }
+}
+
 }
