@@ -1,7 +1,6 @@
 /* Fuente para Títulos (Cranio) */
 @font-face {
     font-family: 'Cranio';
-    /* Salimos de la carpeta CSS con ../ y entramos a assets/fonts/cranio */
     src: url('../assets/fonts/cranio/Cranio.otf') format('opentype');
     font-weight: normal;
     font-style: normal;
@@ -32,9 +31,15 @@
     --hero-background-color: rgb(7, 6, 21);
     --nav-line-a: #F0F4F8;
     
-    /* Agregados para asegurar lectura (Contraste) */
+    /* lectura (Contraste) */
     --text-main: #F0F4F8;        /* Blanco azulado para textos */
-    --bg-glass: rgba(84, 102, 167, 0.15); /* Transparencia usando su color secundario */
+    --text-color-card: #14161f;  /* texto en tarjetas blancas */
+    --atomic-mass-color: gray;
+    --bg-glass: rgba(84, 102, 167, 0.15); /* Transparencia color secundario */
+    --background-color-redes: rgb(208, 208, 208);
+    --background-color-card: #ffffff;
+    --background-color-modal-caja: #F0F4F8;
+    --background-color-modal: rgba(7, 6, 21, 0.85);
 
     /* Tipografías */
     --font-titulos: 'Cranio', sans-serif;
@@ -56,6 +61,3 @@ body {
 h1, h2, h3 {
     font-family: var(--font-titulos);
 }
-
-
-

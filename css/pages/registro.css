@@ -1,0 +1,91 @@
+.wrapper-centrado {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    min-height: 100vh;
+}
+
+/* --- Contenedor principal --- */
+
+.contenedor-registro {
+    background-color: var(--background-color-card); /* Blanco según global.css */
+    width: 400px;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.4);
+    text-align: center;
+}
+
+.titulo-registro {
+    color: var(--text-color-card);
+    font-size: 32px;
+    margin-bottom: 10px;
+}   
+
+.subtitulo-registro {
+    font-family: var(--font-textos);
+    color: #666666;
+    margin-bottom: 30px;    
+}
+
+.form-estilo {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+input {
+    padding: 15px 20px;
+    border: 1px solid #cccccc;
+    border-radius: 30px; 
+    background-color: #f4f7f6;
+    font-family: var(--font-textos);
+    outline: none;
+}
+
+.btn-registro {
+    margin-top: 10px;
+    padding: 15px;
+    background-color: var(--color-primary);
+    color: #ffffff;
+    border: none;
+    border-radius: 30px;
+    font-family: var(--font-titulos);
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s ease; /* Transición suave para interactividad */
+}
+
+.btn-registro:hover {
+    background-color: var(--color-secondary);
+    transform: translateY(-2px); /* Pequeño efecto de elevación*/
+}
+
+/* --- VÍNCULOS --- */
+
+.enlace-retorno {
+    margin-top: 25px;
+}
+
+.enlace-retorno a {
+    color: var(--color-primary);
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.enlace-retorno a:hover {
+    text-decoration: underline;
+}
+
+/* --- DISEÑO RESPONSIVO --- */
+
+@media (max-width: 480px) {
+    .contenedor-registro {
+        padding: 30px 20px;
+        width: 95%; 
+    }
+    .titulo-registro {
+        font-size: 26px;
+    }
+}
