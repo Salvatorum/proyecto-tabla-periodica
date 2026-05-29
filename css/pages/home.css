@@ -1,0 +1,19 @@
+.home-title {
+    text-align: center;
+    margin-top: 2em;
+    color: var(--text-main); 
+    letter-spacing: 6px;
+    text-transform: uppercase; 
+}
+
+#sect-card {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    margin-top: 10em;
+    max-width: 1200px; 
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
