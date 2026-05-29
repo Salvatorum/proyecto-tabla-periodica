@@ -181,15 +181,28 @@ main {
 
 /* -- Footer -- */
 footer{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto 50px; 
     gap: 15px;
     padding: 20px 40px;
     margin-top: 2em;
+    align-items: center
+    
+   
 }
 
-#redes a {
+#logo-footer img{
+    z-index: -1;
+    width: 100px;
+    height: auto;
+}
+.redes {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap; /* Permite que bajen si no hay espacio */
+}
+.redes a {
     display: inline-flex; 
     align-items: center;
     justify-content: center;
@@ -198,15 +211,29 @@ footer{
     margin-right: 1em;
     margin-bottom: 1em;
     padding: 5px;
+    color: var(--text-color-card);
+
+    transition: transform 0.3s ease;
+}
+.redes a:hover{
+    transform: scale(1.15); 
 }
 
-#redes img {
+.redes img {
     width: 32px;
     height: auto;
     display: block;
     transition: transform 0.3s ease;
 }
 
-#redes a:hover img {
+.redes a:hover img {
     transform: scale(1.15); 
+}
+
+.caja-ayuda {
+    display: flex;
+    flex-direction: column; /* Alinea los enlaces uno abajo del otro */
+    align-items: center;    /* Centrado horizontal */
+    justify-content: center; /* Centrado vertical */
+    max-width: 100% !important; /* Evita que el max-width previo rompa el centrado en el grid */
 }

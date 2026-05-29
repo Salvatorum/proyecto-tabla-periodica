@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Crear Cuenta</title>
+
+    <link rel="stylesheet" href="NewAcc.css">
+
+</head>
+
+<body>
+
+    <main>
+
+        <div class="contenedor-login">
+
+            <h1>Crear Cuenta</h1>
+
+            <p>Registrate para continuar</p>
+
+            <form>
+
+                <input 
+                type="text" 
+                placeholder="Nombre de usuario"
+                required
+                pattern="[A-Za-z]+"
+                title="Solo letras">
+
+                <input 
+                type="email" 
+                placeholder="Correo electrónico"
+                required
+                pattern=".+@.+\..+">
+
+                <input 
+                type="password"
+                placeholder="Contraseña"
+
+                required
+
+                minlength="8"
+                maxlength="12"
+
+                pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[#?!@$%^&*-]).{8,12}$"
+
+                title="La contraseña debe tener entre 8 y 12 caracteres, una mayúscula, una minúscula, un número y un carácter especial.">
+
+                <input 
+                type="password"
+                placeholder="Confirmar contraseña"
+                required>
+
+                <a href="../index.html" class="boton-login">Crear Cuenta</a>
+
+            </form>
+
+            <div class="links">
+
+                <a href="../login.html">Ya tengo cuenta</a>
+
+            </div>
+
+        </div>
+
+    </main>
+
+</body>
+
+</html>

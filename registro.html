@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro - Tabla Periódica</title>
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/pages/registro.css">
+    <link rel="icon" href="./assets/img/logo01.png" type="image/png">  
+
+</head>
+<body class="hero">
+    <header>
+        <nav>
+            <ul> 
+                <li><img id="logo" src="./assets/img/logo01.png" alt="logo"></li>
+                <li><a href="./index.html" id="elementos">Elementos</a></li>
+                <li><a href="./perfil.html" class="nav-shadow-icon"><img src="./assets/img/perfil.svg" alt="Perfil"></a></li>
+                <li><a href="./login.html" class="nav-shadow-icon"><img src="./assets/img/login.svg" alt="Login"></a></li>
+            </ul>
+        </nav>
+    </header>
+    <main class="hero wrapper-centrado">
+        <section class="flex-box">
+            <article class="contenedor-registro">
+                <h1 class="titulo-registro">Crear Cuenta</h1>
+                <p class="subtitulo-registro">Registrate para continuar</p>
+                <form action="./index.html" method="GET" class="form-estilo">
+                    <input type="text" name="usuario" placeholder="Nombre de usuario" autofocus>
+                    <input type="email" name="correo" placeholder="Correo electrónico">
+                    <input type="password" name="pass" placeholder="Contraseña">
+                    <input type="password" name="pass-confirm" placeholder="Confirmar contraseña">
+                    <button type="submit" class="btn-registro">Continuar</button>
+                </form>
+                <div class="enlace-retorno">
+                    <a href="login.html">¿Ya tienes una cuenta? Iniciar sesión</a>
+                </div>
+            </article>
+        </section>
+        
+    </main>
+    <footer>
+        <div id="logo-footer">
+            <img src="./assets/img/logo01.png" alt="logo">
+        </div>
+        
+        
+        <div class="redes">
+            <a href="https://github.com/Salvatorum/proyecto-tabla-periodica" target="_blank" aria-label="GitHub"><img src="./assets/img/github.png" alt="github"></a>
+            <a href="#" target="_blank" aria-label="LinkedIn"><img src="./assets/img/social.png" alt="LinkedIn"></a>
+            <a href="#" target="_blank" aria-label="Instagram"><img src="./assets/img/logotipo-de-instagram.png" alt="Instagram"></a>
+        </div>
+
+        <div class="redes caja-ayuda">
+            <a href="#">Contáctanos</a>
+            <a href="#">Ayuda</a>
+            <a href="#">Preguntas Frecuentes</a>
+        </div>
+
+        <div id="text-footer">
+            <p>&copy; 2026 Tabla Periódica. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+</body>
+</html>
