@@ -4,19 +4,62 @@
 <head>
 
     <meta charset="UTF-8">
+
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Recuperar Contraseña</title>
 
-    <link rel="stylesheet" href="ForgetPass.css">
+   <link rel="stylesheet" href="../css/global.css">
+
+    <link rel="stylesheet" href="../css/components.css">
+
+    <link rel="stylesheet" href="../css/animations.css">
+
+    <link rel="stylesheet" href="./ForgetPass.css">
+
 
 </head>
 
-<body>
+<body class="hero">
+
+    <header>
+
+        <nav>
+
+    <div class="logo-container">
+
+        <img src="../assets/img/logo01.png" alt="Logo">
+
+        <h2>Periodic System</h2>
+
+    </div>
+
+    <ul>
+
+        <li><a href="./index.html" id="elementos">Elementos</a></li>
+
+        <li>
+            <a href="./perfil.html" class="nav-shadow-icon">
+                <img src="../assets/img/perfil.svg" alt="Perfil">
+            </a>
+        </li>
+
+        <li>
+            <a href="./login.html" class="nav-shadow-icon">
+                <img src="../assets/img/logo01.png" alt="Login">
+            </a>
+        </li>
+
+         </ul>
+
+     </nav>
+
+    </header>
 
     <main>
 
-        <div class="contenedor-login">
+        <section class="contenedor-login">
 
             <h1>Recuperar Contraseña</h1>
 
@@ -24,12 +67,9 @@
 
             <form>
 
-                <input 
-                type="email" 
-                placeholder="Correo electrónico"
-                required
-                pattern=".+@.+\..+"
-                title="Ingresá un correo válido">
+
+                <input type="email" placeholder="Correo electrónico" required>
+
 
                 <a href="../login.html" class="boton-login">
                     Enviar
@@ -45,9 +85,21 @@
 
             </div>
 
-        </div>
+        </section>
 
     </main>
+
+    <footer>
+        <div id="text-footer">
+            <p>&copy; 2026 Tabla Periódica. Todos los derechos reservados.</p>
+        </div>
+        
+        <div id="redes">
+            <a href="https://github.com/Salvatorum/proyecto-tabla-periodica" target="_blank" aria-label="GitHub"><img src="../assets/img/github.png" alt="github"></a>
+            <a href="#" target="_blank" aria-label="LinkedIn"><img src="../assets/img/social.png" alt="LinkedIn"></a>
+            <a href="#" target="_blank" aria-label="Instagram"><img src="../assets/img/logotipo-de-instagram.png" alt="Instagram"></a>
+        </div>
+    </footer>
 
 </body>
 

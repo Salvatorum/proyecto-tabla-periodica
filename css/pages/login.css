@@ -1,34 +1,11 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body{
-
-    font-family: Arial, Helvetica, sans-serif;
+main{
 
     min-height: 100vh;
 
     display: flex;
+
     justify-content: center;
-    align-items: center;
 
-    background-color: #0e1117;
-
-    background-image: 
-    linear-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
-
-    background-size: 40px 40px;
-}
-
-main{
-
-    width: 100%;
-
-    display: flex;
-    justify-content: center;
     align-items: center;
 
     padding: 20px;
@@ -47,9 +24,7 @@ main{
     text-align: center;
 }
 
-
-
-h1{
+.contenedor-login h1{
 
     font-size: 40px;
 
@@ -58,7 +33,7 @@ h1{
     color: black;
 }
 
-p{
+.contenedor-login p{
 
     margin-bottom: 30px;
 
@@ -68,6 +43,7 @@ p{
 form{
 
     display: flex;
+
     flex-direction: column;
 
     gap: 20px;
@@ -82,11 +58,15 @@ input{
     border-radius: 30px;
 
     background-color: #cfcfcf;
+
+    font-family: var(--font-textos);
 }
 
 .boton-login{
 
     display: block;
+
+    width: 100%;
 
     text-align: center;
 
@@ -94,18 +74,18 @@ input{
 
     border-radius: 30px;
 
-    background-color: #311B92;
+    background-color: var(--color-primary);
 
     color: white;
 
     text-decoration: none;
 
-    margin-top: 10px;
+    transition: 0.3s;
 }
 
 .boton-login:hover{
 
-    background-color: #4527A0;
+    background-color: #2c249c;
 }
 
 .links{
@@ -113,6 +93,7 @@ input{
     margin-top: 25px;
 
     display: flex;
+
     flex-direction: column;
 
     gap: 10px;
@@ -122,7 +103,7 @@ input{
 
     text-decoration: none;
 
-    color: #311B92;
+    color: var(--color-primary);
 }
 
 .links a:hover{
@@ -130,7 +111,39 @@ input{
     text-decoration: underline;
 }
 
-/* RESPONSIVE */
+header nav {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    padding: 1em 2em;
+}
+
+.logo-container {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+}
+
+.logo-container img {
+
+    width: 45px;
+
+    height: 45px;
+}
+
+.logo-container h2 {
+
+    color: var(--text-main);
+
+    font-size: 1.5rem;
+}
 
 /* TABLET */
 
@@ -141,7 +154,7 @@ input{
         width: 70%;
     }
 
-    h1{
+    .contenedor-login h1{
 
         font-size: 35px;
     }
@@ -159,7 +172,7 @@ input{
         padding: 30px 20px;
     }
 
-    h1{
+    .contenedor-login h1{
 
         font-size: 28px;
     }
@@ -169,9 +182,60 @@ input{
         padding: 12px;
     }
 
-    button{
+    .boton-login{
 
         padding: 12px;
     }
+
+    footer {
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 1.5em 2em;
+
+    border-top: 1px solid rgba(255,255,255,0.1);
+
+    margin-top: 3em;
+}
+
+#text-footer p {
+
+    color: var(--text-main);
+    font-size: 0.9rem;
+}
+
+#redes {
+
+    display: flex;
+    gap: 1em;
+}
+
+#redes a img {
+
+    width: 28px;
+    height: 28px;
+
+    transition: transform 0.3s ease;
+}
+
+#redes a img:hover {
+
+    transform: scale(1.1);
+}
+
+/* ---------- RESPONSIVE ---------- */
+
+@media (max-width: 768px) {
+
+    footer {
+
+        flex-direction: column;
+        gap: 1em;
+
+        text-align: center;
+    }
+}
 
 }
