@@ -111,6 +111,40 @@ input{
     text-decoration: underline;
 }
 
+header nav {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    padding: 1em 2em;
+}
+
+.logo-container {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+}
+
+.logo-container img {
+
+    width: 45px;
+
+    height: 45px;
+}
+
+.logo-container h2 {
+
+    color: var(--text-main);
+
+    font-size: 1.5rem;
+}
+
 /* TABLET */
 
 @media(max-width: 768px){
