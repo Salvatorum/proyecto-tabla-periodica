@@ -1,0 +1,181 @@
+* {
+    margin: 0;
+    padding: 0%;
+
+}
+
+
+main {
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+h1 {
+    color: black;
+}
+
+.contenedor_principal {
+
+    height: 80vh;
+    width: 80%;
+    display: grid;
+    grid-template-columns: repeat(2, 50%);
+    margin: 2em;
+}
+
+.perfil {
+    max-width: 60%;
+}
+
+.perfil,
+.favoritos {
+    background-color: whitesmoke;
+    display: flex;
+    flex-direction: column;
+    padding: 2em;
+    gap: 1em;
+    border-radius: 15px;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+}
+
+.perfil:hover,
+.favoritos:hover {
+    transform: translateY(-5px);
+}
+
+.perfil img {
+
+    width: 40%;
+
+}
+
+.perfil input {
+    text-align: center;
+    background-color: #d9d9d9;
+    width: 80%;
+    border-radius: 500px;
+    height: 3em;
+    border: none;
+    outline: none;
+}
+
+input::placeholder {
+    color: #666;
+}
+
+.formulario_perfil {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1em
+}
+
+
+
+.botones,
+.boton_falso {
+    background-color: var(--color-primary);
+    color: white;
+    padding: 0.9em 1.5em;
+    border-radius: 500px;
+    border: white;
+    width: 60%;
+    cursor: pointer;
+    transition: 0.3s;
+    font-weight: bold;
+    font-size: 1em;
+    text-align: center;
+}
+
+.boton_falso {
+    text-decoration: none;
+}
+
+
+.botones:hover,
+.boton_falso:hover,
+.actualizar_perfil-disparador:hover {
+    background-color: var(--color-secondary);
+}
+
+/* Hago un check box oculto para crear un mensaje de perfil guardado*/
+.checkoculto {
+    display: none;
+}
+
+.actualizar_perfil-disparador {
+    display: inline-block;
+    background-color: var(--color-primary);
+    color: white;
+    padding: 0.9em 1.5em;
+    border-radius: 500px;
+    border: white;
+    width: 60%;
+    cursor: pointer;
+    transition: 0.3s;
+    font-weight: bold;
+    text-align: center;
+
+}
+
+#mensaje {
+    margin-top: 1em;
+    color: green;
+    display: none;
+}
+
+.oracion {
+
+    color: black;
+}
+
+/* Aca muestro el mensaje*/
+.checkoculto:checked~#mensaje {
+    display: block;
+}
+
+.checkoculto:checked~.actualizar_perfil-disparador {
+    background-color: #5A00B3;
+}
+
+
+@media (max-width: 768px) {
+    main {
+
+        margin: 0em;
+    }
+
+    body {
+        overflow: visible;
+    }
+
+    .contenedor_principal {
+        grid-template-columns: 1fr;
+        height: 100vh;
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+        row-gap: 1em;
+    }
+
+    h1 {
+        color: black;
+        font-size: 2em;
+    }
+
+    .perfil {
+        max-width: 100%;
+    }
+
+    .perfil,
+    .favoritos {
+        padding: 0em;
+    }
+}
