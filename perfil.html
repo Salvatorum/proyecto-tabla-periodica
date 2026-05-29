@@ -4,11 +4,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/pages/perfil.css">
+    <link rel="stylesheet" href="./css/components.css">
+    <link rel="stylesheet" href="./css/pages/perfil.css">
+
     <title>Perfil</title>
+
 </head>
 
-<body>
+<body class="hero">
+
+    <header>
+        <nav>
+            <ul>
+                <li><img id="logo" src="./assets/img/logo01.png" alt="logo"></li>
+                <li><a href="#" id="elementos">Elementos</a></li>
+                <li><a href="./perfil.html" class="nav-shadow-icon"><img src="./assets/img/perfil.svg" alt="Perfil"></a>
+                </li>
+                <li><a href="./login.html" class="nav-shadow-icon"><img src="./assets/img/login.svg" alt="Login"></a>
+                </li>
+            </ul>
+        </nav>
+    </header>
 
 
     <main>
@@ -18,16 +34,17 @@
                 <h1>Mi perfil</h1>
                 <h3>Gestiona tus datos</h3>
 
-                <form method="POST"></form>
-                <input name="nombre" value="Milagros" placeholder="Nombre" type="text" id="nombre" required>
-                <input name="apellido" value="Roggero" placeholder="Apellido" type="text" id="apellido" required>
-                <input name="email" value="milagros@gmail.com" placeholder="Email" type="email" id="email" readonly>
-                <button type="submit">Guardar</button>
+                <form class="formulario_perfil" action="./index.html" method="POST">
+                    <input name="nombre" value="Milagros" placeholder="Nombre" type="text" id="nombre" required>
+                    <input name="apellido" value="Roggero" placeholder="Apellido" type="text" id="apellido" required>
+                    <input name="email" value="milagros@gmail.com" placeholder="Email" type="email" id="email" readonly>
+                    <input type="checkbox" id="checkoculto" class="checkoculto">
+                    <label for="checkoculto" class="actualizar_perfil-disparador">Actualizar perfil</label>
+                    <p id="mensaje">¡Perfil Actualizado!</p>
+                    <button type="submit" class="botones">Guardar</button>
                 </form>
-                <input type="checkbox" id="checkoculto" class="checkoculto">
-                <label for="checkoculto" class="actualizar_perfil-disparador">Actualizar perfil</label>
-                <p id="mensaje">¡Perfil Actualizado!</p>
-                <button type="button" onclick="window.location.href='login.html'"> Cerrar Sesion</button>
+
+                <a href="./login.html" class="boton_falso">Cerrar Sesión </a>
             </section>
 
 
@@ -36,10 +53,27 @@
                 <h1>Mis favoritos</h1>
                 <h3>Tu lista de elementos esta aqui:</h3>
                 <p>No agregaste ningún elemento a tus favoritos..</p>
-                <button type="button" onclick="window.location.href='index.html'">Ver elementos disponibles</button>
+                <a href="./index.html" class="boton_falso">
+                    Ver elementos disponibles
+                </a>
             </section>
         </div>
     </main>
+
+    <footer>
+        <div id="text-footer">
+            <p>&copy; 2026 Tabla Periódica. Todos los derechos reservados.</p>
+        </div>
+
+        <div id="redes">
+            <a href="https://github.com/Salvatorum/proyecto-tabla-periodica" target="_blank" aria-label="GitHub"><img
+                    src="./assets/img/github.png" alt="github"></a>
+            <a href="#" target="_blank" aria-label="LinkedIn"><img src="./assets/img/social.png" alt="LinkedIn"></a>
+            <a href="#" target="_blank" aria-label="Instagram"><img src="./assets/img/logotipo-de-instagram.png"
+                    alt="Instagram"></a>
+        </div>
+    </footer>
+
 </body>
 
 
