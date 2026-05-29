@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Login</title>
+
+    <link rel="stylesheet" href="css/pages/login.css">
+
+</head>
+
+<body>
+
+    <main>
+
+        <div class="contenedor-login">
+
+            
+
+            <h1>Iniciar Sesión</h1>
+
+            <p>Ingresá a tu cuenta</p>
+
+            <form>
+
+                <input 
+                    type="text"
+                    placeholder="Usuario o Correo"
+                    required>
+
+                <input 
+                    type="password"
+                    placeholder="Ingresá tu contraseña"
+
+                    required
+
+                    minlength="8"
+                    maxlength="12"
+
+                    pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[#?!@$%^&*-]).{8,12}$">
+
+                <a href="index.html" class="boton-login">Ingresar</a>
+
+            </form>
+
+            <div class="links">
+
+                <a href="Pages_login/ForgetPass.html">¿Olvidaste tu contraseña?</a>
+
+                <a href="Pages_login/NewAcc.html">Crear cuenta</a>
+
+            </div>
+
+        </div>
+
+    </main>
+
+</body>
+
+</html>
