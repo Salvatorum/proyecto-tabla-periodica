@@ -82,10 +82,10 @@ input::placeholder {
 .botones,
 .boton_falso {
     background-color: var(--color-primary);
-    color: white;
+    color: var(--text-main);
     padding: 0.9em 1.5em;
     border-radius: 500px;
-    border: white;
+    border: var(--text-main);
     width: 60%;
     cursor: pointer;
     transition: 0.3s;
@@ -113,10 +113,10 @@ input::placeholder {
 .actualizar_perfil-disparador {
     display: inline-block;
     background-color: var(--color-primary);
-    color: white;
+    color: var(--text-main);
     padding: 0.9em 1.5em;
     border-radius: 500px;
-    border: white;
+    border: var(--text-color-card);
     width: 60%;
     cursor: pointer;
     transition: 0.3s;
@@ -133,7 +133,7 @@ input::placeholder {
 
 .oracion {
 
-    color: black;
+    color: var(--color-primary);
 }
 
 /* Aca muestro el mensaje*/
@@ -142,7 +142,7 @@ input::placeholder {
 }
 
 .checkoculto:checked~.actualizar_perfil-disparador {
-    background-color: #5A00B3;
+    background-color: var(--color-secondary);
 }
 
 
@@ -166,7 +166,7 @@ input::placeholder {
     }
 
     h1 {
-        color: black;
+        color: var(--text-color-card);
         font-size: 2em;
     }
 
