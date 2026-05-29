@@ -1,27 +1,16 @@
 * {
     margin: 0;
     padding: 0%;
-    font-family: Arial, Helvetica, sans-serif;
 
-}
-
-body {
-    width: 100%;
-    height: 100vh;
-    background-color: #0e1117;
-    background-image:
-        linear-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
-    background-size: 40px 40px;
 }
 
 
 main {
 
-    margin: 2em;
     display: flex;
     align-items: center;
     justify-content: center;
+    height: 100vh;
 }
 
 h1 {
@@ -30,15 +19,15 @@ h1 {
 
 .contenedor_principal {
 
-    height: 85vh;
-    width: 90%;
+    height: 80vh;
+    width: 80%;
     display: grid;
     grid-template-columns: repeat(2, 50%);
     margin: 2em;
 }
 
 .perfil {
-    max-width: 50%;
+    max-width: 60%;
 }
 
 .perfil,
@@ -46,7 +35,7 @@ h1 {
     background-color: whitesmoke;
     display: flex;
     flex-direction: column;
-    padding: 3em;
+    padding: 2em;
     gap: 1em;
     border-radius: 15px;
     align-items: center;
@@ -92,7 +81,7 @@ input::placeholder {
 
 .botones,
 .boton_falso {
-    background-color: #291880;
+    background-color: var(--color-primary);
     color: white;
     padding: 0.9em 1.5em;
     border-radius: 500px;
@@ -113,7 +102,7 @@ input::placeholder {
 .botones:hover,
 .boton_falso:hover,
 .actualizar_perfil-disparador:hover {
-    background-color: #5A00B3;
+    background-color: var(--color-secondary);
 }
 
 /* Hago un check box oculto para crear un mensaje de perfil guardado*/
@@ -123,7 +112,7 @@ input::placeholder {
 
 .actualizar_perfil-disparador {
     display: inline-block;
-    background-color: #291880;
+    background-color: var(--color-primary);
     color: white;
     padding: 0.9em 1.5em;
     border-radius: 500px;
@@ -140,6 +129,11 @@ input::placeholder {
     margin-top: 1em;
     color: green;
     display: none;
+}
+
+.oracion {
+
+    color: black;
 }
 
 /* Aca muestro el mensaje*/
@@ -168,7 +162,7 @@ input::placeholder {
         width: 100%;
         align-items: center;
         justify-content: center;
-        gap: 0em;
+        row-gap: 1em;
     }
 
     h1 {
@@ -182,6 +176,6 @@ input::placeholder {
 
     .perfil,
     .favoritos {
-        padding: 1em;
+        padding: 0em;
     }
 }
