@@ -4,19 +4,52 @@
 <head>
 
     <meta charset="UTF-8">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Crear Cuenta</title>
 
-    <link rel="stylesheet" href="NewAcc.css">
+    <link rel="stylesheet" href="../css/global.css">
+
+    <link rel="stylesheet" href="../css/components.css">
+
+    <link rel="stylesheet" href="../css/animations.css">
+
+    <link rel="stylesheet" href="./NewAcc.css">
 
 </head>
 
-<body>
+<body class="hero">
+
+    <header>
+
+        <nav>
+
+            <ul>
+
+                <li><a href="#" id="elementos">Elementos</a></li>
+
+                <li>
+                    <a href="../perfil.html" class="nav-shadow-icon">
+                        <img src="../assets/img/perfil.svg" alt="Perfil">
+                    </a>
+                </li>
+
+                <li>
+                    <a href="../login.html" class="nav-shadow-icon">
+                        <img src="../assets/img/login.svg" alt="Login">
+                    </a>
+                </li>
+
+            </ul>
+
+        </nav>
+
+    </header>
 
     <main>
 
-        <div class="contenedor-login">
+        <section class="contenedor-login">
 
             <h1>Crear Cuenta</h1>
 
@@ -24,50 +57,35 @@
 
             <form>
 
-                <input 
-                type="text" 
-                placeholder="Nombre de usuario"
-                required
-                pattern="[A-Za-z]+"
-                title="Solo letras">
+                <input type="text" placeholder="Nombre de usuario" required>
 
-                <input 
-                type="email" 
-                placeholder="Correo electrónico"
-                required
-                pattern=".+@.+\..+">
+                <input type="email" placeholder="Correo electrónico" required>
 
-                <input 
-                type="password"
-                placeholder="Contraseña"
+                <input type="password" placeholder="Contraseña" required>
 
-                required
+                <input type="password" placeholder="Confirmar contraseña" required>
 
-                minlength="8"
-                maxlength="12"
-
-                pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[#?!@$%^&*-]).{8,12}$"
-
-                title="La contraseña debe tener entre 8 y 12 caracteres, una mayúscula, una minúscula, un número y un carácter especial.">
-
-                <input 
-                type="password"
-                placeholder="Confirmar contraseña"
-                required>
-
-                <a href="../index.html" class="boton-login">Crear Cuenta</a>
+                <a href="../index.html" class="boton-login">
+                    Crear Cuenta
+                </a>
 
             </form>
 
             <div class="links">
 
-                <a href="../login.html">Ya tengo cuenta</a>
+                <a href="../login.html">
+                    Ya tengo cuenta
+                </a>
 
             </div>
 
-        </div>
+        </section>
 
     </main>
+
+    <footer>
+
+    </footer>
 
 </body>
 

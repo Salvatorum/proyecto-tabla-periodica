@@ -1,77 +1,51 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body{
-
-    font-family: Arial, Helvetica, sans-serif;
+main {
 
     min-height: 100vh;
 
     display: flex;
+
     justify-content: center;
+
     align-items: center;
-
-    background-color: #0e1117;
-
-    background-image: 
-    linear-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
-
-    background-size: 40px 40px;
 }
 
-main{
-
-    width: 100%;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    padding: 20px;
-}
-
-.contenedor-login{
+.contenedor-login {
 
     width: 400px;
 
-    background-color: #e9e9e9;
-
-    border-radius: 20px;
+    background-color: #d9d9d9;
 
     padding: 40px;
+
+    border-radius: 25px;
 
     text-align: center;
 }
 
-h1{
-
-    font-size: 40px;
-
-    margin-bottom: 10px;
+.contenedor-login h1 {
 
     color: black;
+
+    margin-bottom: 10px;
 }
 
-p{
+.contenedor-login p {
+
+    color: #555;
 
     margin-bottom: 30px;
-
-    color: #444;
 }
 
-form{
+.contenedor-login form {
 
     display: flex;
+
     flex-direction: column;
 
     gap: 20px;
 }
 
-input{
+.contenedor-login input {
 
     padding: 15px;
 
@@ -79,87 +53,45 @@ input{
 
     border-radius: 30px;
 
-    background-color: #cfcfcf;
+    background-color: #c4c4c4;
 }
 
-.boton-login{
+.boton-login {
 
     display: block;
 
     width: 100%;
 
-    text-align: center;
-
     padding: 15px;
 
     border-radius: 30px;
 
-    background-color: #311B92;
+    background-color: var(--color-primary);
 
     color: white;
 
     text-decoration: none;
-
-    transition: 0.3s;
 }
 
-.boton-login:hover{
+.links {
 
-    background-color: #4527A0;
+    margin-top: 20px;
 }
 
-.links{
+.links a {
 
-    margin-top: 25px;
-}
-
-.links a{
+    color: var(--color-primary);
 
     text-decoration: none;
-
-    color: #311B92;
 }
 
-.links a:hover{
+@media (max-width: 480px) {
 
-    text-decoration: underline;
-}
-
-/* TABLET */
-
-@media(max-width: 768px){
-
-    .contenedor-login{
-
-        width: 70%;
-    }
-
-    h1{
-
-        font-size: 35px;
-    }
-
-}
-
-/* CELULAR */
-
-@media(max-width: 480px){
-
-    .contenedor-login{
+    .contenedor-login {
 
         width: 90%;
 
         padding: 30px 20px;
-    }
-
-    h1{
-
-        font-size: 28px;
-    }
-
-    input{
-
-        padding: 12px;
     }
 
 }

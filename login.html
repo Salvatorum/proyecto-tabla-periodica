@@ -4,21 +4,52 @@
 <head>
 
     <meta charset="UTF-8">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Login</title>
 
-    <link rel="stylesheet" href="css/pages/login.css">
+    <link rel="stylesheet" href="./css/global.css">
+
+    <link rel="stylesheet" href="./css/components.css">
+
+    <link rel="stylesheet" href="./css/animations.css">
+
+    <link rel="stylesheet" href="./css/pages/login.css">
 
 </head>
 
-<body>
+<body class="hero">
+
+    <header>
+
+        <nav>
+
+            <ul>
+
+                <li><a href="#" id="elementos">Elementos</a></li>
+
+                <li>
+                    <a href="./perfil.html" class="nav-shadow-icon">
+                        <img src="./assets/img/perfil.svg" alt="Perfil">
+                    </a>
+                </li>
+
+                <li>
+                    <a href="./login.html" class="nav-shadow-icon">
+                        <img src="./assets/img/login.svg" alt="Login">
+                    </a>
+                </li>
+
+            </ul>
+
+        </nav>
+
+    </header>
 
     <main>
 
-        <div class="contenedor-login">
-
-            
+        <section class="contenedor-login">
 
             <h1>Iniciar Sesión</h1>
 
@@ -26,37 +57,33 @@
 
             <form>
 
-                <input 
-                    type="text"
-                    placeholder="Usuario o Correo"
-                    required>
+                <input type="text" placeholder="Usuario o Email" required>
 
-                <input 
-                    type="password"
-                    placeholder="Ingresá tu contraseña"
+                <input type="password" placeholder="Contraseña" required>
 
-                    required
-
-                    minlength="8"
-                    maxlength="12"
-
-                    pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[#?!@$%^&*-]).{8,12}$">
-
-                <a href="index.html" class="boton-login">Ingresar</a>
+                <a href="./index.html" class="boton-login">Ingresar</a>
 
             </form>
 
             <div class="links">
 
-                <a href="Pages_login/ForgetPass.html">¿Olvidaste tu contraseña?</a>
+                <a href="./Pages_login/ForgetPass.html">
+                    ¿Olvidaste tu contraseña?
+                </a>
 
-                <a href="Pages_login/NewAcc.html">Crear cuenta</a>
+                <a href="./Pages_login/NewAcc.html">
+                    Crear cuenta
+                </a>
 
             </div>
 
-        </div>
+        </section>
 
     </main>
+
+    <footer>
+
+    </footer>
 
 </body>
 
