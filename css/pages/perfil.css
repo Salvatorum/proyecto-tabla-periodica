@@ -10,7 +10,8 @@ main {
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 100vh;
+    min-height: calc(100vh - 160px);
+    padding: 2em 0; 
 }
 
 h1 {
@@ -18,12 +19,11 @@ h1 {
 }
 
 .contenedor_principal {
-
-    height: 80vh;
+    min-height: 70vh; 
     width: 80%;
     display: grid;
     grid-template-columns: repeat(2, 50%);
-    margin: 2em;
+    gap: 2em; 
 }
 
 .perfil {
@@ -148,8 +148,8 @@ input::placeholder {
 
 @media (max-width: 768px) {
     main {
-
         margin: 0em;
+        padding-top: 100px; 
     }
 
     body {
@@ -158,11 +158,10 @@ input::placeholder {
 
     .contenedor_principal {
         grid-template-columns: 1fr;
-        height: 100vh;
-        width: 100%;
-        align-items: center;
-        justify-content: center;
-        row-gap: 1em;
+        height: auto;
+        min-height: auto; 
+        width: 90%; 
+        row-gap: 2em;
     }
 
     h1 {
@@ -176,6 +175,6 @@ input::placeholder {
 
     .perfil,
     .favoritos {
-        padding: 0em;
+        padding: 2em;
     }
 }
