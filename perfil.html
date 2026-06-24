@@ -36,12 +36,10 @@
                 <h3 class="oracion">Gestiona tus datos</h3>
 
                 <form class="formulario_perfil" action="./index.html" method="GET">
-                    <input name="nombre" value="Milagros" placeholder="Nombre" type="text" id="nombre" required>
-                    <input name="apellido" value="Roggero" placeholder="Apellido" type="text" id="apellido" required>
-                    <input name="email" value="milagros@gmail.com" placeholder="Email" type="email" id="email" readonly>
-                    <input type="checkbox" id="checkoculto" class="checkoculto">
-                    <label for="checkoculto" class="actualizar_perfil-disparador">Actualizar perfil</label>
-                    <p id="mensaje">¡Perfil Actualizado!</p>
+                    <input name="nombre" placeholder="Nombre" type="text" id="nombre" required>
+                    <input name="contraseña" placeholder="contraseña" type="password" id="contraseña" required>
+                    <input name="email" placeholder="Email" type="email" id="password" readonly>
+                    <button type="submit" class="botones">Actualizar</button>
                     <button type="submit" class="botones">Guardar</button>
                 </form>
 
@@ -50,13 +48,9 @@
 
 
 
-            <section class=" favoritos">
-                <h1>Mis favoritos</h1>
-                <h3 class="oracion">Tu lista de elementos esta aqui:</h3>
-                <p class="oracion">No agregaste ningún elemento a tus favoritos..</p>
-                <a href="./index.html" class="boton_falso">
-                    Ver elementos disponibles
-                </a>
+            <section class=" favoritos" id="contenedor_fav">
+                <h1 class="oracion">Mis favoritos</h1>
+                <div id="grilla-favoritos"></div>
             </section>
         </div>
     </main>
@@ -65,25 +59,43 @@
         <div id="logo-footer">
             <img src="./assets/img/logo01.png" alt="logo">
         </div>
-        
-        
-        <div class="redes">
-            <a href="https://github.com/Salvatorum/proyecto-tabla-periodica" target="_blank" aria-label="GitHub"><img src="./assets/img/github.png" alt="github"></a>
-            <a href="#" target="_blank" aria-label="LinkedIn"><img src="./assets/img/social.png" alt="LinkedIn"></a>
-            <a href="#" target="_blank" aria-label="Instagram"><img src="./assets/img/logotipo-de-instagram.png" alt="Instagram"></a>
-        </div>
 
-        <div class="redes caja-ayuda">
-            <a href="#">Contáctanos</a>
-            <a href="#">Ayuda</a>
-            <a href="#">Preguntas Frecuentes</a>
-        </div>
+        <nav aria-label="Redes sociales" class="nav-redes">
+            <ul>
+                <li>
+                    <a href="https://github.com/Salvatorum/proyecto-tabla-periodica" target="_blank"
+                        aria-label="GitHub">
+                        <img src="./assets/img/github.png" alt="">
+                    </a>
+                </li>
+                <li>
+                    <a href="#" target="_blank" aria-label="LinkedIn">
+                        <img src="./assets/img/social.png" alt="">
+                    </a>
+                </li>
+                <li>
+                    <a href="#" target="_blank" aria-label="Instagram">
+                        <img src="./assets/img/logotipo-de-instagram.png" alt="">
+                    </a>
+                </li>
+            </ul>
+        </nav>
+
+        <nav aria-label="Enlaces de ayuda" class="nav-ayuda">
+            <ul>
+                <li><a href="#">Contáctanos</a></li>
+                <li><a href="#">Ayuda</a></li>
+                <li><a href="#">Preguntas frecuentes</a></li>
+            </ul>
+        </nav>
 
         <div id="text-footer">
             <p>&copy; 2026 Tabla Periódica. Todos los derechos reservados.</p>
         </div>
     </footer>
 
+
+    <script type="module" src="./js/pages/perfil.js"></script>
 </body>
 
 
