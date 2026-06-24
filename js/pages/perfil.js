@@ -2,16 +2,18 @@ import { elementos } from "../data.js";
 const contenedorFav = document.getElementById("contenedor_fav");
 const grillaFav = document.getElementById("grilla-favoritos");
 
-// Base de datos local simulada (inicializada desde localStorage)
+//Guardo en variables los localStorage
 let usuariosRegistrados = JSON.parse(localStorage.getItem("usuarios_db")) || [];
 let favoritos = JSON.parse(localStorage.getItem("favs_list")) || [];
 
+//Aca filtro los elementos favoritos
 function obtenerProductosFavoritos() {
   return elementos.filter((element) =>
     favoritos.includes(element.numero_atomico),
   );
 }
 
+//Renderizo la parte de favoritos..
 function rendeFavs(lista) {
   grillaFav.innerHTML = "";
 
@@ -48,22 +50,39 @@ function rendeFavs(lista) {
     masa_atomica.classList.add("atomic-mass");
     masa_atomica.innerText = elemento.masa_atomica;
 
+    const boton = document.createElement("button");
+    boton.classList.add("btn-fav");
+
+    boton.innerText = "🗙";
+
+    //Los agrego de hijos a la card (viene sus atributos del css =  components.css)
     card.appendChild(numero_atomico);
     card.appendChild(simbolo);
     card.appendChild(nombre);
     card.appendChild(masa_atomica);
+    card.appendChild(boton);
     grillaFav.appendChild(card);
+
+    //SACO EL ELEMENTO
+    boton.addEventListener("click", () => {
+      favoritos = favoritos.filter((id) => id !== elemento.numero_atomico);
+
+      localStorage.setItem("favs_list", JSON.stringify(favoritos));
+
+      //Actualizo la parte de favoritos para sacar el elemento
+      rendeFavs(obtenerProductosFavoritos());
+    });
   });
 }
 
-//VALIDACION DE USUARIO Y CONTRASEÑA
+//Renderizo la parte de perfil..
 function renderPerfil() {
   const emailLogueado = localStorage.getItem("usuarioLogueado");
   const usuarioActual = usuariosRegistrados.find(
     (usuario) => usuario.email === emailLogueado,
   );
 
-  //PRUEBA DEL CODIGO SIN LOGEO
+  //Prueba del codigo sin logeo (ya que todavia no terminan la parte del login)
   console.log("usuariosRegistrados:", usuariosRegistrados);
   console.log("emailLogueado:", emailLogueado);
   console.log("usuarioActual:", usuarioActual);
@@ -81,6 +100,7 @@ function renderPerfil() {
 
     const nuevaPassword = document.getElementById("password").value.trim();
 
+    //Valido y verifico que la contraseña y el usuario cumplan con la condicion o no exista el usuario
     const errorUser = validarUsername(nuevoUsername);
 
     const errorPass = validarPassword(nuevaPassword);
@@ -99,6 +119,14 @@ function renderPerfil() {
     localStorage.setItem("usuarios_db", JSON.stringify(usuariosRegistrados));
 
     alert("Cambios guardados correctamente");
+
+    document
+      .getElementById("cerrar-sesion")
+      .addEventListener("click", function (e) {
+        localStorage.removeItem("usuarioLogueado");
+
+        window.location.href = "./login.html";
+      });
   });
 
   function validarUsername(username) {
@@ -132,7 +160,7 @@ function renderPerfil() {
     return "";
   }
 }
-
+//Renderizo y cargo la página.
 window.addEventListener("load", () => {
   const listaFavs = obtenerProductosFavoritos();
   rendeFavs(listaFavs);
