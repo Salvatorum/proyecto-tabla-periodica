@@ -35,13 +35,16 @@
                 <h1>Mi perfil</h1>
                 <h3 class="oracion">Gestiona tus datos</h3>
 
-                <form class="formulario_perfil" action="./index.html" method="GET">
-                    <input name="nombre" placeholder="Nombre" type="text" id="nombre" required>
-                    <input name="contraseña" placeholder="contraseña" type="password" id="contraseña" required>
-                    <input name="email" placeholder="Email" type="email" id="password" readonly>
-                    <button type="submit" class="botones">Actualizar</button>
+                <form class="formulario_perfil" id="form" action="" method="POST">
+                    <input name="nombre" placeholder="Nombre" type="text" id="nombre">
+                    <span id="error-user" class="oracion"></span>
+                    <input name="contraseña" placeholder="contraseña" type="password" id="password">
+                    <span id="error-password" class="oracion"></span>
+                    <input name="email" placeholder="Email" type="email" id="email" readonly>
                     <button type="submit" class="botones">Guardar</button>
                 </form>
+
+
 
                 <a href="./login.html" class="boton_falso">Cerrar Sesión </a>
             </section>
