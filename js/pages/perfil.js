@@ -17,6 +17,13 @@ function obtenerProductosFavoritos() {
 function rendeFavs(lista) {
   grillaFav.innerHTML = "";
 
+  //Cierro sesion
+  document.getElementById("cerrar-sesion").addEventListener("click", () => {
+    localStorage.removeItem("usuarioLogueado");
+    window.location.href = "./login.html";
+  });
+
+  //Agrego los elementos
   if (lista.length === 0) {
     const noResultados = document.createElement("p");
     noResultados.classList.add("oracion");
@@ -119,14 +126,6 @@ function renderPerfil() {
     localStorage.setItem("usuarios_db", JSON.stringify(usuariosRegistrados));
 
     alert("Cambios guardados correctamente");
-
-    document
-      .getElementById("cerrar-sesion")
-      .addEventListener("click", function (e) {
-        localStorage.removeItem("usuarioLogueado");
-
-        window.location.href = "./login.html";
-      });
   });
 
   function validarUsername(username) {
