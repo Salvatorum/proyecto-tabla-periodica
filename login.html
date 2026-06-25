@@ -2,24 +2,14 @@
 <html lang="es">
 
 <head>
-
     <meta charset="UTF-8">
-
-
-
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <title>Login</title>
 
-
     <link rel="stylesheet" href="./css/global.css">
-
     <link rel="stylesheet" href="./css/components.css">
-
     <link rel="stylesheet" href="./css/animations.css">
-
     <link rel="stylesheet" href="./css/pages/login.css">
-
 </head>
 
 <body class="hero">
@@ -36,58 +26,30 @@
     </header>
 
     <main>
-
         <section class="contenedor-login">
-
-
             <h1>Iniciar Sesión</h1>
-
             <p>Ingresá a tu cuenta</p>
 
-            <form>
+            <form id="form-login">
+                <input type="text" id="login-username" placeholder="Usuario o Email" required>
+                <input type="password" id="login-password" placeholder="Contraseña" required>
 
-
-                <input type="text" placeholder="Usuario o Email" required>
-
-                <input type="password" placeholder="Contraseña" required>
-
-<<<<<<< HEAD
                 <button type="submit" class="boton-login">
-                        Ingresar
+                    Ingresar
                 </button>
-=======
-                <a href="./index.html" class="boton-login">Ingresar</a>
-
-
->>>>>>> main
             </form>
 
             <div class="links">
-
-
-                <a href="./Pages_login/ForgetPass.html">
-                    ¿Olvidaste tu contraseña?
-                </a>
-
-<<<<<<< HEAD
-                <a href="./Pages_login/registro.html">
-=======
-                <a href="./registro.html">
->>>>>>> main
-                    Crear cuenta
-                </a>
-
+                <a href="./Pages_login/ForgetPass.html">¿Olvidaste tu contraseña?</a>
+                <a href="./registro.html">Crear cuenta</a>
             </div>
-
         </section>
-
     </main>
 
     <footer>
         <div id="logo-footer">
             <img src="./assets/img/logo01.png" alt="logo">
         </div>
-        
         
         <div class="redes">
             <a href="https://github.com/Salvatorum/proyecto-tabla-periodica" target="_blank" aria-label="GitHub"><img src="./assets/img/github.png" alt="github"></a>
@@ -106,7 +68,8 @@
         </div>
     </footer>
 
+    <script src="./js/auth.js"></script>
+    <script src="./js/pages/login.js"></script>
 </body>
 
 </html>
-
