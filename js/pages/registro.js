@@ -1,3 +1,5 @@
+    document.addEventListener('DOMContentLoaded', () => {
+        
     const formulario = document.querySelector('.form-estilo');
     const inputUsuario = document.querySelector('input[name="usuario"]');
     const inputCorreo = document.querySelector('input[name="correo"]');
@@ -109,3 +111,4 @@
         alert('¡Cuenta creada con éxito! Serás redirigido al Login.');
         //El formulario seguirá su curso hacia login.html mediante el action del HTML
     });
+});
