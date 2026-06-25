@@ -5,9 +5,12 @@
 
     <meta charset="UTF-8">
 
+
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Login</title>
+
 
     <link rel="stylesheet" href="./css/global.css">
 
@@ -21,43 +24,21 @@
 
 <body class="hero">
 
-    <header>
-
-       <nav>
-
-    <div class="logo-container">
-
-        <img src="assets/img/logo01.png" alt="Logo">
-
-        <h2>Periodic System</h2>
-
-    </div>
-
-    <ul>
-
-        <li><a href="../index.html" id="elementos">Elementos</a></li>
-
-        <li>
-            <a href="../perfil.html" class="nav-shadow-icon">
-                <img src="assets/img/perfil.svg" alt="Perfil">
-            </a>
-        </li>
-
-        <li>
-            <a href="../login.html" class="nav-shadow-icon">
-                <img src="assets/img/login.svg" alt="Login">
-            </a>
-        </li>
-
-    </ul>
-
-</nav>
-
+     <header>
+        <nav>
+            <ul> 
+                <li><img id="logo" src="./assets/img/logo01.png" alt="logo"></li>
+                <li><a href="#" id="elementos">Elementos</a></li>
+                <li><a href="./perfil.html" class="nav-shadow-icon"><img src="./assets/img/perfil.svg" alt="Perfil"></a></li>
+                <li><a href="./login.html" class="nav-shadow-icon"><img src="./assets/img/login.svg" alt="Login"></a></li>
+            </ul>
+        </nav>
     </header>
 
     <main>
 
         <section class="contenedor-login">
+
 
             <h1>Iniciar Sesión</h1>
 
@@ -65,22 +46,34 @@
 
             <form>
 
+
                 <input type="text" placeholder="Usuario o Email" required>
 
                 <input type="password" placeholder="Contraseña" required>
 
+<<<<<<< HEAD
                 <button type="submit" class="boton-login">
                         Ingresar
                 </button>
+=======
+                <a href="./index.html" class="boton-login">Ingresar</a>
+
+
+>>>>>>> main
             </form>
 
             <div class="links">
+
 
                 <a href="./Pages_login/ForgetPass.html">
                     ¿Olvidaste tu contraseña?
                 </a>
 
+<<<<<<< HEAD
                 <a href="./Pages_login/registro.html">
+=======
+                <a href="./registro.html">
+>>>>>>> main
                     Crear cuenta
                 </a>
 
@@ -91,17 +84,29 @@
     </main>
 
     <footer>
-        <div id="text-footer">
-            <p>&copy; 2026 Tabla Periódica. Todos los derechos reservados.</p>
+        <div id="logo-footer">
+            <img src="./assets/img/logo01.png" alt="logo">
         </div>
         
-        <div id="redes">
+        
+        <div class="redes">
             <a href="https://github.com/Salvatorum/proyecto-tabla-periodica" target="_blank" aria-label="GitHub"><img src="./assets/img/github.png" alt="github"></a>
             <a href="#" target="_blank" aria-label="LinkedIn"><img src="./assets/img/social.png" alt="LinkedIn"></a>
             <a href="#" target="_blank" aria-label="Instagram"><img src="./assets/img/logotipo-de-instagram.png" alt="Instagram"></a>
+        </div>
+
+        <div class="redes caja-ayuda">
+            <a href="#">Contáctanos</a>
+            <a href="#">Ayuda</a>
+            <a href="#">Preguntas Frecuentes</a>
+        </div>
+
+        <div id="text-footer">
+            <p>&copy; 2026 Tabla Periódica. Todos los derechos reservados.</p>
         </div>
     </footer>
 
 </body>
 
 </html>
+

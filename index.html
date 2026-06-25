@@ -25,94 +25,17 @@
     </header>
     <main>
         <h1 class="home-title">Elementos Quimicos</h1>
+
+        <div id="search-container">
+            <label for="search">
+                <input type="text" id="search" placeholder=" 1, H, Hidrógeno, 1008">
+            </label>
+        </div>
+        
+
         <section id="sect-card">
-           <a href="#modal-h" class="card-link">
-                <article class="card">
-                    <span class="atomic-number">1</span>
-                    <h3>H</h3>
-                    <p class="name">Hidrógeno</p>
-                    <span class="atomic-mass">1.008</span>
-                </article>
-            </a>
-
-            <article class="card">
-                <span class="atomic-number">2</span>
-                <h3>He</h3>
-                <p class="name">Helio</p>
-                <span class="atomic-mass">4.0026</span>
-            </article>
-
-            <article class="card">
-                <span class="atomic-number">3</span>
-                <h3>Li</h3>
-                <p class="name">Litio</p>
-                <span class="atomic-mass">6.94</span>
-            </article>
-
-            <article class="card">
-                <span class="atomic-number">4</span>
-                <h3>Be</h3>
-                <p class="name">Berilio</p>
-                <span class="atomic-mass">9.0122</span>
-            </article>
-
-            <article class="card">
-                <span class="atomic-number">5</span>
-                <h3>B</h3>
-                <p class="name">Boro</p>
-                <span class="atomic-mass">10.81</span>
-            </article>
-
-            <article class="card">
-                <span class="atomic-number">6</span>
-                <h3>C</h3>
-                <p class="name">Carbono</p>
-                <span class="atomic-mass">12.011</span>
-            </article>
-
-            <article class="card">
-                <span class="atomic-number">7</span>
-                <h3>N</h3>
-                <p class="name">Nitrógeno</p>
-                <span class="atomic-mass">14.007</span>
-            </article>
-
-            <article class="card">
-                <span class="atomic-number">8</span>
-                <h3>O</h3>
-                <p class="name">Oxígeno</p>
-                <span class="atomic-mass">15.999</span>
-            </article>
-
-            <article class="card">
-                <span class="atomic-number">9</span>
-                <h3>F</h3>
-                <p class="name">Flúor</p>
-                <span class="atomic-mass">18.998</span>
-            </article>
-
-            <article class="card">
-                <span class="atomic-number">10</span>
-                <h3>Ne</h3>
-                <p class="name">Neón</p>
-                <span class="atomic-mass">20.180</span>
-            </article>
-
-            <article class="card">
-                <span class="atomic-number">11</span>
-                <h3>Na</h3>
-                <p class="name">Sodio</p>
-                <span class="atomic-mass">22.990</span>
-            </article>
-
-            <article class="card">
-                <span class="atomic-number">12</span>
-                <h3>Mg</h3>
-                <p class="name">Magnesio</p>
-                <span class="atomic-mass">24.305</span>
-            </article>
-    
-    </section>
+            <!-- Tarjetas -->
+        </section>
     <!-- modal de card -->
     <div id="modal-h" class="modal">
         <div class="modal-content">
@@ -130,18 +53,44 @@
             
     </main>
     <footer>
+        <div id="logo-footer">
+            <img src="./assets/img/logo01.png" alt="logo">
+        </div>
+
+       <nav aria-label="Redes sociales" class="nav-redes">
+            <ul>
+                <li>
+                    <a href="https://github.com/Salvatorum/proyecto-tabla-periodica" target="_blank" aria-label="GitHub">
+                        <img src="./assets/img/github.png" alt="">
+                    </a>
+                </li>
+                <li>
+                    <a href="#" target="_blank" aria-label="LinkedIn">
+                        <img src="./assets/img/social.png" alt="">
+                    </a>
+                </li>
+                <li>
+                    <a href="#" target="_blank" aria-label="Instagram">
+                        <img src="./assets/img/logotipo-de-instagram.png" alt="">
+                    </a>
+                </li>
+            </ul>
+        </nav>
+
+        <nav aria-label="Enlaces de ayuda" class="nav-ayuda">
+            <ul>
+                <li><a href="#">Contáctanos</a></li>
+                <li><a href="#">Ayuda</a></li>
+                <li><a href="#">Preguntas frecuentes</a></li>
+            </ul>
+        </nav>
+
         <div id="text-footer">
             <p>&copy; 2026 Tabla Periódica. Todos los derechos reservados.</p>
         </div>
-        
-        <div id="redes">
-            <a href="https://github.com/Salvatorum/proyecto-tabla-periodica" target="_blank" aria-label="GitHub"><img src="./assets/img/github.png" alt="github"></a>
-            <a href="#" target="_blank" aria-label="LinkedIn"><img src="./assets/img/social.png" alt="LinkedIn"></a>
-            <a href="#" target="_blank" aria-label="Instagram"><img src="./assets/img/logotipo-de-instagram.png" alt="Instagram"></a>
-        </div>
     </footer>
 
-
+    <script type="module" src="./js/pages/home.js"></script>
 
 </body>
 </html>
