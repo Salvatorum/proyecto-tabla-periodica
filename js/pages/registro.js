@@ -30,7 +30,7 @@
         input.addEventListener('focus', () => {
             input.style.borderColor = '#cccccc';
             input.style.boxShadow = 'none';
-            mensajeError.textContent = ''; // Limpia el mensaje de error general
+            mensajeError.textContent = ''; //Limpia el mensaje de error general
         });
     });
 
@@ -45,7 +45,7 @@
 
     //Control del envío
     formulario.addEventListener('submit', (e) => {
-        // Cargamos la base de datos local para verificar duplicados
+        //Cargamos la base de datos local para verificar duplicados
         let usuariosDB = JSON.parse(localStorage.getItem("usuarios_db")) || [];
         let registroValido = true;
 
@@ -58,7 +58,7 @@
         });
 
         if (!registroValido) {
-            e.preventDefault(); // Restringe el envío
+            e.preventDefault(); //Restringe el envío
             mensajeError.textContent = '❌ Por favor, completa todos los campos obligatorios.';
             return;
         }
