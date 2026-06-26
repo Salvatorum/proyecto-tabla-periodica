@@ -19,7 +19,7 @@ function rendeFavs(lista) {
 
   //Cierro sesion
   document.getElementById("cerrar-sesion").addEventListener("click", () => {
-    sessionStorage.removeItem("usuarioLogueado");
+    sessionStorage.removeItem("usuarioActivo");
     window.location.href = "./login.html";
   });
 
