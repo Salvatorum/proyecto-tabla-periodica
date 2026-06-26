@@ -1,4 +1,4 @@
-    document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener('DOMContentLoaded', () => {
         
     const formulario = document.querySelector('.form-estilo');
     const inputUsuario = document.querySelector('input[name="usuario"]');

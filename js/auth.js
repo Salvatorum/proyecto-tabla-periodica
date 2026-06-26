@@ -9,7 +9,7 @@ function iniciarSesion(userInput, password) {
 
     // 1. Traemos los usuarios registrados en el LocalStorage (los que guardará tu compañero)
     // Si no hay ninguno todavía, usamos un array vacío
-    const usuariosRegistrados = JSON.parse(localStorage.getItem('usuarios')) || [];
+    const usuariosRegistrados = JSON.parse(localStorage.getItem('usuarios_db')) || [];
 
     // 2. Buscamos si existe un usuario cuyo email o username coincida
     const usuarioEncontrado = usuariosRegistrados.find(user => 
