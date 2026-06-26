@@ -90,12 +90,12 @@ function renderPerfil() {
   const usuarioActual = usuariosRegistrados.find(
     (usuario) => usuario.email === emailLogueado,
   );
-
+/*
   //Prueba del codigo sin logeo (ya que todavia no terminan la parte del login)
   console.log("usuariosRegistrados:", usuariosRegistrados);
   console.log("emailLogueado:", emailLogueado);
   console.log("usuarioActual:", usuarioActual);
-
+*/
   // verifica si no hay un usuario logueado en la sesión activa
   if (!usuarioActual) {
         console.warn("No se encontró ningún usuario activo en la sesión.");
@@ -107,7 +107,7 @@ function renderPerfil() {
   document.getElementById("password").value = usuarioActual.password;
   document.getElementById("error-user").textContent = "";
   document.getElementById("error-password").textContent = "";
-
+    
   document.getElementById("form").addEventListener("submit", function (e) {
     e.preventDefault();
     const nuevoUsername = document.getElementById("nombre").value.trim();
