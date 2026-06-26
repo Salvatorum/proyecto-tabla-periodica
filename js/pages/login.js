@@ -1,4 +1,3 @@
-login.js
 // js/pages/login.js
 
 document.addEventListener('DOMContentLoaded', () => {

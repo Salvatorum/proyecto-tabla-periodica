@@ -61,3 +61,27 @@ export function renderFooter(){
         </div>
     `;
 }
+
+// Generador de tarjetas de elementos
+export function generarTarjetaHTML(elemento, esFavorito = false, esVistaPerfil = false) {
+
+    let iconoBoton = '';
+
+    if(esVistaPerfil) {
+        iconoBoton = '🗙';
+    } else {
+        iconoBoton = esFavorito ? '❤️':'🖤';
+    }
+
+    const claseActiva = (esFavorito && !esVistaPerfil) ? 'activa':'';
+
+    return `
+        <article class="card" data-id="${elemento.numero_atomico}">
+            <span class="atomic-number">${elemento.numero_atomico}</span>
+            <h3>${elemento.simbolo}</h3>
+            <p class="name">${elemento.nombre}</p>
+            <span class="atomic-mass">${elemento.masa_atomica}</span>
+            <button class="btn-fav ${claseActiva}">${iconoBoton}</button>
+        </article>
+    `;
+}
