@@ -1,10 +1,12 @@
 import { elementos } from "../data.js";
+import {generarTarjetaHTML} from "../components.js";
+import {toggleFavoritoStorage,obtenerFavoritos} from "../storage.js";
 
 const contenedorCard = document.getElementById("sect-card"); 
 const inputBusqueda = document.getElementById("search");
 
-let favoritos = JSON.parse(localStorage.getItem("favs_list")) || [];
-
+let favoritos = obtenerFavoritos();
+/*
 function rendeCard(lista) {
     contenedorCard.innerHTML = "";
 
@@ -58,21 +60,42 @@ function rendeCard(lista) {
 
         contenedorCard.appendChild(card);
     });
+}*/
+function rendeCard(lista) {
+    contenedorCard.innerHTML = "";
+
+    if (lista.length === 0) {
+        const noResults = document.createElement("p");
+        noResults.innerText = "No se encontraron elementos coincidentes.";
+        contenedorCard.appendChild(noResults);
+        return;
+    }
+
+    const conjuntoTarjetasHTML = lista.map((elem)=>{
+        const esFav = favoritos.includes(elem.numero_atomico);
+        return generarTarjetaHTML(elem,esFav,false); 
+    }).join('');
+    contenedorCard.innerHTML = conjuntoTarjetasHTML;
 }
+// escucha y ejecuta toggleFavorito()
+contenedorCard.addEventListener("click", (event) => {
+    const botonTocado = event.target.closest(".btn-fav");
+
+    if(!botonTocado) return;
+
+    console.log("click en boton favorito");
+    const tarjeta = botonTocado.closest(".card");
+    const idElemento = Number(tarjeta.dataset.id);
+    toggleFavorito(idElemento, botonTocado)
+});
 
 function toggleFavorito(idElemento, boton) {
-    if (favoritos.includes(idElemento)) {
-        favoritos = favoritos.filter(favId => favId !== idElemento);
-        boton.classList.remove("active");
-        boton.innerText = "🖤";
-    } else {
-        favoritos.push(idElemento);
-        boton.classList.add("active");
-        boton.innerText = "❤️";
-    }
-    
-    localStorage.setItem("favs_list", JSON.stringify(favoritos));
+    const esAhoraFavorito = toggleFavoritoStorage(idElemento);
+
+    boton.innerText = esAhoraFavorito ? "❤️" : "🖤";
+    boton.classList.toggle("activa", esAhoraFavorito);
 }
+
 
 inputBusqueda.addEventListener("keyup", (event) => {
     const textoBuscado = event.target.value.toLowerCase();

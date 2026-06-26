@@ -19,7 +19,7 @@ function rendeFavs(lista) {
 
   //Cierro sesion
   document.getElementById("cerrar-sesion").addEventListener("click", () => {
-    localStorage.removeItem("usuarioLogueado");
+    sessionStorage.removeItem("usuarioLogueado");
     window.location.href = "./login.html";
   });
 
@@ -84,7 +84,9 @@ function rendeFavs(lista) {
 
 //Renderizo la parte de perfil..
 function renderPerfil() {
-  const emailLogueado = localStorage.getItem("usuarioLogueado");
+  const usuarioActivoSesion = JSON.parse(sessionStorage.getItem("usuarioActivo"));
+  const emailLogueado = usuarioActivoSesion ? usuarioActivoSesion.email : null;
+
   const usuarioActual = usuariosRegistrados.find(
     (usuario) => usuario.email === emailLogueado,
   );
@@ -94,6 +96,12 @@ function renderPerfil() {
   console.log("emailLogueado:", emailLogueado);
   console.log("usuarioActual:", usuarioActual);
 
+  // verifica si no hay un usuario logueado en la sesión activa
+  if (!usuarioActual) {
+        console.warn("No se encontró ningún usuario activo en la sesión.");
+        return;
+    }
+
   document.getElementById("email").value = usuarioActual.email;
   document.getElementById("nombre").value = usuarioActual.username;
   document.getElementById("password").value = usuarioActual.password;
@@ -102,18 +110,13 @@ function renderPerfil() {
 
   document.getElementById("form").addEventListener("submit", function (e) {
     e.preventDefault();
-
     const nuevoUsername = document.getElementById("nombre").value.trim();
-
     const nuevaPassword = document.getElementById("password").value.trim();
 
     //Valido y verifico que la contraseña y el usuario cumplan con la condicion o no exista el usuario
     const errorUser = validarUsername(nuevoUsername);
-
     const errorPass = validarPassword(nuevaPassword);
-
     document.getElementById("error-user").textContent = errorUser;
-
     document.getElementById("error-password").textContent = errorPass;
 
     if (errorUser || errorPass) {
@@ -124,7 +127,6 @@ function renderPerfil() {
     usuarioActual.password = nuevaPassword;
 
     localStorage.setItem("usuarios_db", JSON.stringify(usuariosRegistrados));
-
     alert("Cambios guardados correctamente");
   });
 
