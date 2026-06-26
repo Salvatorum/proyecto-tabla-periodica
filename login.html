@@ -2,76 +2,47 @@
 <html lang="es">
 
 <head>
-
     <meta charset="UTF-8">
-
-
-
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <title>Login</title>
 
-
     <link rel="stylesheet" href="./css/global.css">
-
     <link rel="stylesheet" href="./css/components.css">
-
     <link rel="stylesheet" href="./css/animations.css">
-
     <link rel="stylesheet" href="./css/pages/login.css">
-
 </head>
 
 <body class="hero">
 
-     <header id="main-header">
-    
-    </header>
+    <header></header>
 
     <main>
-
         <section class="contenedor-login">
-
-
             <h1>Iniciar Sesión</h1>
-
             <p>Ingresá a tu cuenta</p>
 
-            <form>
+            <form id="form-login">
+                <input type="text" id="login-username" placeholder="Usuario o Email" required>
+                <input type="password" id="login-password" placeholder="Contraseña" required>
 
-
-                <input type="text" placeholder="Usuario o Email" required>
-
-                <input type="password" placeholder="Contraseña" required>
-
-                <a href="./index.html" class="boton-login">Ingresar</a>
-
-
+                <button type="submit" class="boton-login">
+                    Ingresar
+                </button>
             </form>
 
             <div class="links">
-
-
-                <a href="./ForgetPass.html">
-                    ¿Olvidaste tu contraseña?
-                </a>
-
-                <a href="./registro.html">
-                    Crear cuenta
-                </a>
-
+                <a href="./ForgetPass.html">¿Olvidaste tu contraseña?</a>
+                <a href="./registro.html">Crear cuenta</a>
             </div>
-
         </section>
-
     </main>
 
-    <footer id="main-footer">
-        
-    </footer>
+    <footer></footer>
 
-    <script type="module" src="./js/app.js"></script>
+    <script src="./js/app.js"></script>
+    
+    <script src="./js/auth.js"></script>
+    <script src="./js/pages/login.js"></script>
 </body>
 
 </html>
-
