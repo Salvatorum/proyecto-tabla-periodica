@@ -1,29 +1,43 @@
 // Inyeción de header
 export function renderHeader() {
-    const header = document.getElementById('main-header');
+  const header = document.getElementById("main-header");
+  const usuarioActivo = JSON.parse(sessionStorage.getItem("usuarioActivo"));
 
-    if(!header) return;
+  if (!header) return;
 
-    header.innerHTML = `
+  header.innerHTML = `
         <nav>
             <ul> 
                 <li><img id="logo" src="./assets/img/logo01.png" alt="logo"></li>
                 <li><a href="./index.html" id="elementos">Elementos</a></li>
-                <li><a href="./perfil.html" class="nav-shadow-icon"><img src="./assets/img/perfil.svg" alt="Perfil"></a></li>
-                <li><a href="./login.html" class="nav-shadow-icon"><img src="./assets/img/login.svg" alt="Login"></a></li>
-            </ul>
+  ${
+    usuarioActivo
+      ? `
+                    <li>
+                        <a href="./perfil.html" class="nav-shadow-icon">
+                            <img src="./assets/img/perfil.svg" alt="Perfil">
+                        </a>
+                    </li>
+                  `
+      : `
+                    <li>
+                        <a href="./login.html" class="nav-shadow-icon">
+                            <img src="./assets/img/login.svg" alt="Login">
+                        </a>
+                    </li>
+                  `
+  }
         </nav>
     `;
-
 }
 // Inyeción de footer
 
-export function renderFooter(){
-    const footer = document.getElementById('main-footer');
+export function renderFooter() {
+  const footer = document.getElementById("main-footer");
 
-    if(!footer) return;
+  if (!footer) return;
 
-    footer.innerHTML = `
+  footer.innerHTML = `
         <div id="logo-footer">
             <img src="./assets/img/logo01.png" alt="logo">
         </div>
@@ -63,19 +77,22 @@ export function renderFooter(){
 }
 
 // Generador de tarjetas de elementos
-export function generarTarjetaHTML(elemento, esFavorito = false, esVistaPerfil = false) {
+export function generarTarjetaHTML(
+  elemento,
+  esFavorito = false,
+  esVistaPerfil = false,
+) {
+  let iconoBoton = "";
 
-    let iconoBoton = '';
+  if (esVistaPerfil) {
+    iconoBoton = "🗙";
+  } else {
+    iconoBoton = esFavorito ? "❤️" : "🖤";
+  }
 
-    if(esVistaPerfil) {
-        iconoBoton = '🗙';
-    } else {
-        iconoBoton = esFavorito ? '❤️':'🖤';
-    }
+  const claseActiva = esFavorito && !esVistaPerfil ? "activa" : "";
 
-    const claseActiva = (esFavorito && !esVistaPerfil) ? 'activa':'';
-
-    return `
+  return `
         <article class="card" data-id="${elemento.numero_atomico}">
             <span class="atomic-number">${elemento.numero_atomico}</span>
             <h3>${elemento.simbolo}</h3>
