@@ -75,6 +75,16 @@ document.addEventListener('DOMContentLoaded', () => {
             inputPass.style.borderColor = '#ff4d4d';
             return;
         }
+        // Validar formato de correo electrónico
+        // Este patrón exige texto + @ + texto + . + texto
+        const regexEmail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        
+        if (!regexEmail.test(inputCorreo.value)) {
+            e.preventDefault(); //Evita que se redirija al login o se envíe el formulario
+            mensajeError.textContent = '❌ Por favor, ingresa un correo electrónico válido (debe incluir @ y un dominio ej:.com).';
+            inputCorreo.style.borderColor = '#ff4d4d'; //Marca el error en rojo
+            return;
+        }
 
         //Validar que las contraseñas coincidan
         if (inputPass.value !== inputPassConfirm.value) {
