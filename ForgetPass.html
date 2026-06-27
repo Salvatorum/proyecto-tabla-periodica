@@ -32,27 +32,25 @@
         <section class="contenedor-login">
 
             <h1>Recuperar Contraseña</h1>
-
             <p>Ingresá tu correo electrónico</p>
 
-            <form>
+            <!-- Agregamos ID y novalidate -->
+            <form id="form-forget-pass" novalidate>
 
+                <!-- Le agregamos un ID al input para leerlo desde JS -->
+                <input type="email" id="forget-email" placeholder="Correo electrónico" required>
 
-                <input type="email" placeholder="Correo electrónico" required>
-
-
-                <a href="./login.html" class="boton-login">
+                <!-- CAMBIO CLAVE: Cambiamos la etiqueta <a> por un <button> de tipo submit -->
+                <button type="submit" class="boton-login">
                     Enviar
-                </a>
+                </button>
 
             </form>
 
             <div class="links">
-
                 <a href="./login.html">
                     Volver al Login
                 </a>
-
             </div>
 
         </section>
@@ -64,6 +62,7 @@
     </footer>
 
     <script type="module" src="./js/app.js"></script>
+    <script src="./js/pages/forgetPass.js"></script>
 </body>
 
 </html>
