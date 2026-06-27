@@ -14,20 +14,20 @@ document.addEventListener('DOMContentLoaded', () => {
     formulario.appendChild(mensajeError);
 
     // --- VALIDACIONES EN TIEMPO REAL (Punto 4.1: focus y blur) ---
-    const inputs = [userInput, passwordInput];
+   const inputs = [userInput, passwordInput];
 
     inputs.forEach(input => {
         // Cuando el usuario sale del input (blur)
         input.addEventListener('blur', () => {
             if (input.value.trim() === '') {
-                input.style.borderColor = '#ff4d4d'; // Borde rojo si está vacío
+                input.style.border = '2px solid #ff4d4d'; // Definimos el borde completo
                 input.style.boxShadow = '0 0 5px rgba(255, 77, 77, 0.5)';
             }
         });
 
         // Cuando el usuario vuelve a entrar al input (focus)
         input.addEventListener('focus', () => {
-            input.style.borderColor = ''; // Limpiamos el error visual
+            input.style.border = ''; // Limpiamos quitando el estilo inyectado
             input.style.boxShadow = '';
         });
     });
@@ -43,7 +43,7 @@ document.addEventListener('DOMContentLoaded', () => {
         let formularioValido = true;
         inputs.forEach(input => {
             if (input.value.trim() === '') {
-                input.style.borderColor = '#ff4d4d';
+                input.style.border = '2px solid #ff4d4d'; // Definimos el borde completo acá también
                 formularioValido = false;
             }
         });
